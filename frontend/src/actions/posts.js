@@ -30,8 +30,12 @@ export const deletePost = id => dispatch => {
 
 // Adding Post
 export const addPost = newPost => dispatch => {
+  const config = {
+    headers: { "content-type": "multipart/form-data" }
+  };
+
   axios
-    .post("api/blog/", newPost)
+    .post("api/blog/", newPost, config)
     .then(res => {
       dispatch({
         type: ADD_POST,
