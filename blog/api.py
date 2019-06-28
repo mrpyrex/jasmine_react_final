@@ -12,3 +12,9 @@ class PostAPIViewset(viewsets.ModelViewSet):
     parser_classes = (MultiPartParser, FormParser)
 
     serializer_class = PostSerializer
+
+    # def get_queryset(self):
+    #     return self.request.user.posts.all()
+
+    def perform_create(self, serializer):
+        serializer.save(author=self.request.user)

@@ -9,6 +9,7 @@ import Home from "../components/pages/Home";
 import About from "./pages/About";
 import Gallery from "./pages/Gallery";
 import BlogDashboard from "./blog/BlogDashboard";
+import Contact from "./Contact";
 
 class App extends Component {
   render() {
@@ -21,6 +22,7 @@ class App extends Component {
             <Route path="/about" component={About} />
             <Route path="/blog" component={BlogDashboard} />
             <Route path="/gallery" component={Gallery} />
+            <Route path="/contact" component={Contact} />
           </Switch>
         </HashRouter>
       </Provider>
