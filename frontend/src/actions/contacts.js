@@ -3,12 +3,8 @@ import { ADD_CONTACT } from "./types";
 
 // ADDING CONTACTS
 export const addContact = newContact => dispatch => {
-  const config = {
-    headers: { "content-type": "multipart/form-data" }
-  };
-
   axios
-    .post("/api/contact/", newContact, config)
+    .post("/api/contact/", newContact)
     .then(res => {
       dispatch({
         type: ADD_CONTACT,

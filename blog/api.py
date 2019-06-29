@@ -16,5 +16,5 @@ class PostAPIViewset(viewsets.ModelViewSet):
     # def get_queryset(self):
     #     return self.request.user.posts.all()
 
-    def perform_create(self, serializer):
-        serializer.save(author=self.request.user)
+    # def perform_create(self, serializer):
+    #     serializer.save(author=self.request.user)
