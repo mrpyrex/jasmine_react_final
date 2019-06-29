@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'frontend',
     'gallery',
     'rest_framework',
+    'team',
     'knox',
 ]
 

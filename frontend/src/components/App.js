@@ -4,12 +4,12 @@ import { Provider } from "react-redux";
 import store from "../store";
 import ReactDOM from "react-dom";
 import Header from "../layout/Header";
-
 import Home from "../components/pages/Home";
 import About from "./pages/About";
 import Gallery from "./pages/Gallery";
 import BlogDashboard from "./blog/BlogDashboard";
 import Contact from "./Contact";
+import Footer from "../layout/Footer";
 
 class App extends Component {
   render() {
@@ -24,6 +24,7 @@ class App extends Component {
             <Route path="/gallery" component={Gallery} />
             <Route path="/contact" component={Contact} />
           </Switch>
+          <Footer />
         </HashRouter>
       </Provider>
     );

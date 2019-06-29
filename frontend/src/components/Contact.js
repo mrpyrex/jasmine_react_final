@@ -111,7 +111,7 @@ export class Contact extends Component {
                   onChange={this.onChange}
                 />
                 <label className="form-check-label" htmlFor="is_subscribed">
-                  Subscribe to our newsletter?
+                  <small>Subscribe to our newsletter?</small>
                 </label>
               </div>
               <hr />
