@@ -12,6 +12,7 @@ class PostAPIViewset(viewsets.ModelViewSet):
     parser_classes = (MultiPartParser, FormParser)
 
     serializer_class = PostSerializer
+    lookup_field = 'slug'
 
     # def get_queryset(self):
     #     return self.request.user.posts.all()

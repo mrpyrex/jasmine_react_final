@@ -10,6 +10,7 @@ import Gallery from "./pages/Gallery";
 import BlogDashboard from "./blog/BlogDashboard";
 import Contact from "./Contact";
 import Footer from "../layout/Footer";
+import Post from "./blog/Post";
 
 class App extends Component {
   render() {
@@ -20,9 +21,10 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
-            <Route path="/blog" component={BlogDashboard} />
+            <Route exact path="/blog" component={BlogDashboard} />
             <Route path="/gallery" component={Gallery} />
             <Route path="/contact" component={Contact} />
+            <Route path="/blog/:slug" component={Post} />
           </Switch>
           <Footer />
         </HashRouter>

@@ -1,4 +1,9 @@
-import { GET_POSTS, DELETE_POST, ADD_POST } from "../actions/types.js";
+import {
+  GET_POSTS,
+  DELETE_POST,
+  ADD_POST,
+  GET_POST
+} from "../actions/types.js";
 
 const initialState = {
   posts: []
@@ -10,6 +15,11 @@ export default function(state = initialState, action) {
       return {
         ...state,
         posts: action.payload
+      };
+    case GET_POST:
+      return {
+        ...state,
+        post: state.post.filter(post => post.slug == action.payload)
       };
     case DELETE_POST:
       return {
