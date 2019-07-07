@@ -21,7 +21,9 @@ const Header = () => {
           Contact Us
         </Link>
       </nav>
-      <Link className="btn btn-outline-primary">Shop</Link>
+      <Link className="btn btn-outline-primary" to="/shop">
+        Shop
+      </Link>
     </div>
   );
 };

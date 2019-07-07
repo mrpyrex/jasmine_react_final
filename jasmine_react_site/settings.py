@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'team',
     'knox',
+    'shop',
 ]
 
 MIDDLEWARE = [

@@ -11,6 +11,7 @@ import BlogDashboard from "./blog/BlogDashboard";
 import Contact from "./Contact";
 import Footer from "../layout/Footer";
 import Post from "./blog/Post";
+import ProductList from "./shop/ProductList";
 
 class App extends Component {
   render() {
@@ -25,6 +26,7 @@ class App extends Component {
             <Route path="/gallery" component={Gallery} />
             <Route path="/contact" component={Contact} />
             <Route path="/blog/:slug" component={Post} />
+            <Route path="/shop" component={ProductList} />
           </Switch>
           <Footer />
         </HashRouter>
