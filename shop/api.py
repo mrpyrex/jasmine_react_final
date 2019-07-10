@@ -24,6 +24,18 @@ class ProductInCategoryView(ListAPIView):
         return Product.objects.filter(category=slug)
 
 
+class ProductDetailAPIView(RetrieveAPIView):
+    serializer_class = ProductSerializer
+    permission_classes = [
+        permissions.AllowAny
+    ]
+    lookup_field = 'slug'
+
+    def get_queryset(self):
+        slug = self.kwargs['slug']
+        return Product.objects.filter(slug=slug)
+
+
 class CategoryAPIView(ListAPIView):
     queryset = Category.objects.all()
     permission_classes = [

@@ -12,6 +12,7 @@ import Contact from "./Contact";
 import Footer from "../layout/Footer";
 import Post from "./blog/Post";
 import ProductList from "./shop/ProductList";
+import Product from "./shop/Product";
 
 class App extends Component {
   render() {
@@ -26,7 +27,8 @@ class App extends Component {
             <Route path="/gallery" component={Gallery} />
             <Route path="/contact" component={Contact} />
             <Route path="/blog/:slug" component={Post} />
-            <Route path="/shop" component={ProductList} />
+            <Route exact path="/shop" component={ProductList} />
+            <Route path="/shop/:slug" component={Product} />
           </Switch>
           <Footer />
         </HashRouter>

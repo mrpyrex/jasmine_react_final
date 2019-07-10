@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'team',
     'knox',
     'shop',
+    'cart',
 ]
 
 MIDDLEWARE = [
