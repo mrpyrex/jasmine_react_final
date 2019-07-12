@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { getPics } from "../../actions/gallery";
@@ -23,7 +24,7 @@ export class Gallery extends Component {
                 className="col-md-6 col-lg-4 item zoom-on-hover"
                 key={pic.id}
               >
-                <a className="lightbox" href="{}">
+                <Link to={pic.image} className="lightbox">
                   <img className="img-fluid image" src={pic.image} />
                   <span className="description">
                     <span className="description-heading">{pic.theme}</span>
@@ -33,7 +34,7 @@ export class Gallery extends Component {
                       adipiscing elit.
                     </span>
                   </span>
-                </a>
+                </Link>
               </div>
             ))}
           </div>

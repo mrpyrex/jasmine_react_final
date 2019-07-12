@@ -18,22 +18,20 @@ export class ProductList extends Component {
         <div className="row">
           {this.props.products.map(product => (
             <div className="col-md-3" key={product.slug}>
-              <Link to={`/shop/${product.slug}`}>
-                <div className="card">
+              <div className="card">
+                <Link to={`/shop/${product.slug}`}>
                   <img
                     src={product.image}
                     className="card-img-top"
                     alt={product.name}
                   />
-                  <div className="card-body">
-                    <h5 className="card-title">{product.name}</h5>
-                    <p className="card-text">{product.description}</p>
-                    <a href="#" className="btn btn-primary">
-                      Go somewhere
-                    </a>
-                  </div>
+                </Link>
+                <div className="card-body">
+                  <h5 className="card-title">{product.name}</h5>
+                  <p className="card-text">{product.description}</p>
+                  <button className="btn btn-primary">Add to cart</button>
                 </div>
-              </Link>
+              </div>
             </div>
           ))}
         </div>
